@@ -8,3 +8,13 @@ export function getArticles() {
     return body.data.articles
     })
   }
+
+export function getIndividualArticle(article_id) {
+    return NCNewsApi.get(`/articles/${article_id}`, {
+        params: {
+            article_id: article_id
+        }
+    }).then((body) => {
+        return body.data.article
+    })
+}
