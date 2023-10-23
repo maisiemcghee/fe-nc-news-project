@@ -3,12 +3,18 @@ import { getArticles } from '../api';
 
 function Home() {
     const [articles, setArticles] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
-        getArticles().then((articlesFromApi) => {
+        setIsLoading(true)
+        getArticles()
+        .then((articlesFromApi) => {
             setArticles(articlesFromApi)
+            setIsLoading(false)
         })
     }, [])
+
+    if (isLoading)  return <p>Loading articles...</p>
     return ( 
         <div>
             <h3>View all articles here ... </h3>
