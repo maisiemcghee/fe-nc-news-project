@@ -1,42 +1,51 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+    background-color: rgb(243, 252, 255);
+    font-family:monospace
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header {
+    background-color: rgb(0, 24, 84);
+    padding: 10px;
+    text-align: center;
+    color: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+    background-color: white;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.article-list {
+    list-style: none;
 }
 
-.card {
-  padding: 2em;
+.article-card {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: 33% 33% 33%;
+    grid-area: 
+    "img title title"
+    "img topic topic"
+    "img author author";
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 30px;
+    margin: 1rem;
+    background-color: rgb(198, 221, 255);
 }
 
-.read-the-docs {
-  color: #888;
+img {
+    grid-area: "img";
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    height: 80%;
+    width: 90%;
+    margin-right: 10px;
 }
+
