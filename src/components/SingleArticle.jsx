@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { getIndividualArticle } from "../api"
 import { useParams } from "react-router-dom"
+import SingleArticleComments from "./SingleArticleComments"
 
 function SingleArticle() {
     const [selectedArticle, setSelectedArticle] = useState({})
@@ -23,9 +24,10 @@ function SingleArticle() {
 
     if (isLoading)  return <p>Loading article...</p>
     else {
-        if(error) return <p>Error 404 - Article not found</p>
+        if(error) return <p>No comments</p>
         else {
     return (
+        <>
         <div className="single-article">
             <h3 className="single-title">{selectedArticle.title}</h3>
             <p className="single-topic">Topic: {selectedArticle.topic}</p>
@@ -33,6 +35,10 @@ function SingleArticle() {
             <p className="single-body">{selectedArticle.body}</p>
             <p className="single-author">Author: {selectedArticle.author}</p>
         </div>
+        <div>
+            <SingleArticleComments />
+        </div>
+        </>
     )
         }
     }

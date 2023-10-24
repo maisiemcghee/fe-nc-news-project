@@ -18,3 +18,13 @@ export function getIndividualArticle(article_id) {
         return body.data.article
     })
 }
+
+export function getArticleComments(article_id) {
+    return NCNewsApi.get(`/articles/${article_id}/comments`, {
+        params: {
+            article_id: article_id
+        }
+    }).then((body) => {
+        return body.data.comments
+    })
+}
