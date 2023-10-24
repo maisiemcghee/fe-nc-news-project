@@ -85,6 +85,7 @@ img {
     border: 1px solid black;
     padding: 20px;
     margin: 2rem;
+    border-radius: 20px;
 }
 
 .single-title {
@@ -96,24 +97,74 @@ img {
     margin: 1rem;
     background-color: rgb(0, 24, 84);
     color: white;
+    border-radius: 20px;
+    font-size:x-large;
 }
 
 .single-img {
     grid-area: "single-img";
     grid-row: 2 / 5;
     grid-column: 1 / 2;
-    height: 100%;
+    width: 100%;
+    height: auto;
     margin: 1rem;
 }
 
 .single-topic {
     padding: 1rem;
+    margin-left: 1rem;
 }
 
 .single-body {
     padding: 1rem;
+    margin-left: 1rem;
 }
 
 .single-author {
     padding: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.comment-list {
+    list-style: none;
+}
+
+.comment-card {
+    display: grid;
+    grid-template-rows: 60% 30% 10%;
+    grid-area: 
+    "comment-body"
+    "comment-author"
+    "comment-votes";
+    border: 1px solid black;
+    padding: 20px;
+    margin: 2rem;
+    border-radius: 20px;
+    width: auto;;
+    background-color: rgb(198, 221, 255);
+}
+
+.comment-body {
+    grid-area: "comment-body";
+    grid-row: 1 / 2
+}
+
+.comment-author {
+    grid-area: "comment-author";
+    grid-row: 2 / 3
+}
+
+.comment-votes {
+    grid-area: "comment-votes";
+    grid-row: 3 / 4
+}
+
+.comment-header {
+    text-align: center;
+}
+
+.no-comments-header {
+    text-align: center;
 }
