@@ -6,6 +6,7 @@ import AuthorList from './components/AuthorList'
 import LogIn from './components/LogIn'
 import { Route, Routes, Link } from "react-router-dom"
 import './App.css'
+import SingleArticle from './components/SingleArticle'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <Route path="/topics" element={<TopicList />} />
     <Route path="/authors" element={<AuthorList />} />
     <Route path="/login" element={<LogIn />} />
+    <Route path='/articles/:article_id' element={<SingleArticle />} />
   </Routes>
     </div>
   )
