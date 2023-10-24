@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getArticleComments } from "../api"
 import { useParams } from "react-router-dom"
+import Voter from "./Voter"
 
 function SingleArticleComments() {
     const [articleComments, setArticleComments] = useState([])
@@ -35,7 +36,7 @@ function SingleArticleComments() {
                     return <li className="comment-card" key={articleComment.comment_id}>
                         <p className="comment-body">{articleComment.body}</p>
                         <p className="comment-author">Author : {articleComment.author}</p>
-                        <p className="comment-votes">Votes : {articleComment.votes}</p>
+                        <Voter likes={articleComment.votes} />
                     </li>
                 })}
             </ul>
