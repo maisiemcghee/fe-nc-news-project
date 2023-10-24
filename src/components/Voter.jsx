@@ -11,7 +11,7 @@ function Voter({ likes }) {
 
     return (
         <div>
-            <p className="comment-votes">Votes : {likes + userLikes} <button className="like-button"
+            <p className="article-votes">Votes : {likes + userLikes} <button className="like-button"
                 disabled={userLikes === 1}
                 aria-label="like"
                 onClick={() => {
