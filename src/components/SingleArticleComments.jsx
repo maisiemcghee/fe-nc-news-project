@@ -22,7 +22,9 @@ function SingleArticleComments() {
     }, [article_id])
 
     if (isLoading)  return <p>Loading comments...</p>
-    else {
+    else if (!articleComments.length) {
+        return <h2 className="no-comments-header">No comments</h2>
+    } else {
         if(error) return <p>Failed to load comments</p>
         else {
     return (
