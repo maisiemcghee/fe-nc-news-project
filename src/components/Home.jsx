@@ -24,9 +24,9 @@ function Home() {
                 {articles.map((article) => {
                     return <li className="article-card" key={article.article_id}>
                         <img src={article.article_img_url} />
-                        <h4 >{article.title}</h4>
-                        <p>Topic : {article.topic}</p>
-                        <p>Author : {article.author}</p>
+                        <h4 className="title">{article.title}</h4>
+                        <p className="topic">Topic : {article.topic}</p>
+                        <p className="author">Author : {article.author}</p>
                         <Link to={`/articles/${article.article_id}`}><button className="button">View article</button></Link>
                     </li>
                 })}

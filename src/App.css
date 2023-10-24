@@ -45,9 +45,9 @@ img {
     grid-area: "img";
     grid-column: 1 / 2;
     grid-row: 1 / 5;
-    height: 80%;
-    width: 90%;
-    margin-right: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px
 }
 
 .button {
@@ -58,6 +58,19 @@ img {
     background-color: rgb(0, 0, 74);
     color: white;
     font-family: monospace;
+    margin-left:2rem;
+}
+
+.title {
+    margin-left: 2rem;
+}
+
+.topic {
+    margin-left: 2rem;
+}
+
+.author {
+    margin-left: 2rem;
 }
 
 .single-article {
