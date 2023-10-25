@@ -133,7 +133,7 @@ img {
 
 .comment-card {
     display: grid;
-    grid-template-rows: 60% 30% 10%;
+    grid-template-rows: 65% 15% 20%;
     grid-area: 
     "comment-body"
     "comment-author"
@@ -167,4 +167,23 @@ img {
 
 .no-comments-header {
     text-align: center;
+}
+
+.like-button {
+    background-color: rgb(210, 255, 210);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.7rem;
+}
+
+.dislike-button {
+    background-color: rgb(255, 178, 178);
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 21px;
+}
+
+.voter {
+    position: relative;
+    top: -30px
 }

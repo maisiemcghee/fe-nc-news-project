@@ -28,3 +28,13 @@ export function getArticleComments(article_id) {
         return body.data.comments
     })
 }
+
+export function updateArticleVotes(article_id, value) {
+    console.log(typeof value)
+    return NCNewsApi.patch(`/articles/${article_id}`, {
+            inc_vote: value
+    })
+    .then((body) => {
+        return body.data.article
+    })
+}
