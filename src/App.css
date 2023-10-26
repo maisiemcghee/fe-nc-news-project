@@ -59,6 +59,9 @@ img {
     color: white;
     font-family: monospace;
     margin-left:2rem;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 10px;
 }
 
 .title {
