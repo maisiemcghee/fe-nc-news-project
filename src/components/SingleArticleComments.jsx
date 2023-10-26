@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getArticleComments } from "../api"
 import { useParams } from "react-router-dom"
+import AddComment from "./addComment"
 
 function SingleArticleComments() {
     const [articleComments, setArticleComments] = useState([])
@@ -20,7 +21,6 @@ function SingleArticleComments() {
             setError({ err })
         })
     }, [article_id])
-
     if (isLoading)  return <p>Loading comments...</p>
     else if (!articleComments.length) {
         return <h2 className="no-comments-header">No comments</h2>
@@ -29,7 +29,9 @@ function SingleArticleComments() {
         else {
     return (
         <div>
+
             <h2 className="comment-header"> Comment section </h2>
+            <AddComment articleComments={articleComments} setArticleComments={setArticleComments}/>
             <ul className="comment-list">
                 {articleComments.map((articleComment) => {
                     return <li className="comment-card" key={articleComment.comment_id}>

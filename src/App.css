@@ -187,3 +187,18 @@ img {
     position: relative;
     top: -30px
 }
+
+#add-comment {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: larger;
+}
+
+#submit-comment {
+    background-color: rgb(0, 24, 84);
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 10px;
+}
