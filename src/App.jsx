@@ -22,6 +22,7 @@ function App() {
     <Route path="/authors" element={<AuthorList />} />
     <Route path="/login" element={<LogIn />} />
     <Route path='/articles/:article_id' element={<SingleArticle />} />
+    {/* <Route path='/topics/:topic_id' element={<SingleTopic />} /> */}
   </Routes>
     </div>
   )

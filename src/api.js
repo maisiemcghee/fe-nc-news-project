@@ -48,3 +48,10 @@ export function postComment(article_id, newCommentBody, authorInput) {
         return body.data.comment
     })
 }
+
+export function getTopics() {
+    return NCNewsApi.get('/topics')
+    .then((body) => {
+        return body.data.topics
+    })
+}

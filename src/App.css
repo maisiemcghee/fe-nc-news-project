@@ -205,3 +205,14 @@ img {
     padding: 0.7rem;
     border-radius: 10px;
 }
+
+.topic-list {
+    list-style: none;
+}
+
+.topic-card {
+    border: 1px solid black;
+    padding: 1rem;
+    margin:1rem;
+    border-radius: 10px;
+}
