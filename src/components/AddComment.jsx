@@ -45,7 +45,7 @@ function AddComment({articleComments, setArticleComments}) {
     if (error) return <p>Failed to post comment - check internet connection</p>
     return <form onSubmit={handleSubmit} action="submit" id="add-comment">
         <ul><label>Add comment: </label><input type="text" id="comment-body" value={newCommentBody} onChange={(event) => setNewCommentBody(event.target.value)} required></input> </ul>
-        <ul><label>Enter username: </label><input type="text" id="comment-author" value={authorInput} onChange={(event) => setAuthorInput(event.target.value)} required></input> </ul>
+        <ul><label>Username: </label><input type="text" id="comment-author" value="tickle122" required disabled="disabled" readOnly="readonly"></input> </ul>
         <button type="submit" id="submit-comment">submit</button>
     </form>
 }
