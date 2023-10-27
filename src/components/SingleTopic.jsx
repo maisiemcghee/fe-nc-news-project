@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getArticlesByTopic } from "../api"
-import { useSearchParams } from "react-router-dom"
+import { useSearchParams, Link } from "react-router-dom"
 
 function SingleTopic() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -36,6 +36,7 @@ function SingleTopic() {
                     <h4 className="title">{topicArticle.title}</h4>
                     <p className="topic">Topic : {topicArticle.topic}</p>
                     <p className="author">Author : {topicArticle.author}</p>
+                    <Link to={`/articles/${topicArticle.article_id}`}><button className="button">View article</button></Link>
                 </li>
             })}
         </ul>
