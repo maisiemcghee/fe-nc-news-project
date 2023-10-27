@@ -4,21 +4,25 @@ import { Link } from 'react-router-dom';
 
 function TopicList() {
     const [topics, setTopics] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
+        setIsLoading(true)
         getTopics().then((topicsFromApi) => {
             setTopics(topicsFromApi)
+            setIsLoading(false)
         })
     }, [])
 
+    if (isLoading) return <p>Loading topics ...</p>
     return ( <div>
-    <p> Select a topic ...</p>
+    <h3> Select a topic ...</h3>
     <ul className="topic-list">
         {topics.map((topic) => {
-            return <li className="topic-card" key={topic.topic_id}>
+            return <li className="topic-card" key={topic.slug}>
                 <h4 className="slug">{topic.slug}</h4>
                 <p className="description">About topic : {topic.description}</p>
-                <Link to={`/topics/${topic.topic_id}`}><button className="button">View Topic</button></Link>
+                <Link to={`/articles?topic=${topic.slug}`}><button className="button">View {`${topic.slug}`} articles</button></Link>
             </li>
         })}
     </ul>

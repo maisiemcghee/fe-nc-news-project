@@ -208,6 +208,9 @@ img {
 
 .topic-list {
     list-style: none;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
 }
 
 .topic-card {
@@ -215,4 +218,5 @@ img {
     padding: 1rem;
     margin:1rem;
     border-radius: 10px;
+    width: 400px;
 }
