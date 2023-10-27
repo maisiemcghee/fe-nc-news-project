@@ -7,6 +7,7 @@ import LogIn from './components/LogIn'
 import { Route, Routes, Link } from "react-router-dom"
 import './App.css'
 import SingleArticle from './components/SingleArticle'
+import SingleTopic from './components/SingleTopic'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Route path="/authors" element={<AuthorList />} />
     <Route path="/login" element={<LogIn />} />
     <Route path='/articles/:article_id' element={<SingleArticle />} />
+    <Route path='/articles' element={<SingleTopic />} />
   </Routes>
     </div>
   )
